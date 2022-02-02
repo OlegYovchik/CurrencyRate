@@ -1,1 +1,62 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    margin: 0;
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 93vh;
+    background: linear-gradient(to right, #598d80, #b7d8d0);;
+}
+.inp, .sel{
+    display: inline-block;
+    margin-right: 20px;
+}
+label{
+    display: block;
+    text-align: center;
+    font-family: cursive;
+}
+input, select{
+    width: 200px;
+    min-height: 30px;
+    border-radius: 10px;
+    border:0;
+    text-align: center;
+}
+button{
+    width: 100px;
+    min-height: 30px;
+    border-radius: 10px;
+    border: 0;
+    background-color: rgb(238, 83, 83);
+    color: azure;
+}
+input, select, button{
+    font-weight: 600;
+}
+.output{
+    margin-top: 20px;
+    min-height: 50px;
+    border-radius: 10px;
+    background-color: azure;
+    text-align: center;
+    line-height: 250%;
+}
+.output p{
+    font-weight: 600;
+    font-size: 25px;
+}
+footer{
+    display: flex;
+    align-items: center;
+    height: 7vh;
+    background-color: rgb(83, 82, 82);
+}
+footer span{
+    color: azure;
+    margin: 0 10px;
+}
+.date{
+    margin-left: auto;
+}
