@@ -7,10 +7,10 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class GetCashService {
-
+  arrCorrency:any [] = []
   constructor(private http: HttpClient) { }
 
-  getCurrency(): Observable<any>{
+  getCash(): Observable<any>{
     return this.http.get(environment.urlBank);
   }
 }

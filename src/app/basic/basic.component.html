@@ -1,0 +1,28 @@
+<header>
+    <div class="other">
+      <a routerLink="other" routerLinkActive="active">Конвертация в другой валюте</a>
+    </div>
+  </header>
+  <main>
+    <div [formGroup]='form' class='form'>
+      <div class="inp">
+        <label for="inp">Введите сумму валюты</label>
+        <input type="text" formControlName="input" name="inp"/>
+      </div>
+      <div class="sel">
+        <label for="sel">Введите валюту</label>
+        <select name="nameCurrency" formControlName="select" name="sel">
+          <option  *ngFor="let name of arrCurrency">{{name.txt}}</option>
+        </select>  
+      </div>
+      <button (click)="getCash()">Расчитать</button>
+      <div *ngIf="choise" class="output">
+        <p>{{outSum | number: "0.1-2"}} грн.</p> 
+      </div>
+    </div>
+  </main>
+  <footer>
+    <span *ngFor="let item of arrFooter">{{item.cc}}:{{item.rate | number:"0.1-2"}}</span>
+    <span class="date" *ngIf="arrFooter.length != 0">Курс валют на: {{arrFooter[0].exchangedate}}</span>
+  </footer>
+  
